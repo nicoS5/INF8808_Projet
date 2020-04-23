@@ -15,6 +15,8 @@ function moveWafflePre(canvas, widthEcran, heightEcran) {
         .attr("transform", "translate(" + widthEcran*0.3 + "," + -heightEcran*0.45 +")");
     canvas.selectAll(".Button_1")
         .remove();
+    canvas.selectAll(".Text1")
+        .remove();
 }
 
 function removeWaffles(canvas, AllStats, CProvince, heightEcran) {

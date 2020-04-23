@@ -26,6 +26,7 @@
                 canvas = baseCanvas(widthEcran, heightEcran);
 
                 wafflePre(canvas, widthEcran, heightEcran, waffleTaille);
+                Text1(canvas, widthEcran, heightEcran);
                 baseBouton(canvas, widthEcran, heightEcran, nbClick);
 
                 canvas.selectAll(".Button_1")
