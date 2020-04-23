@@ -6,14 +6,6 @@ function baseCanvas(widthEcran, heightEcran) {
         .attr("id", "FirstCanvas")
         .attr("width", widthEcran)
         .attr("height", heightEcran);
-
-    /*canvas.append("rect")
-        .attr("width", widthEcran)
-        .attr("height", heightEcran)
-        .attr("stroke", "blue")
-        .attr("stroke-width", 2)
-        .attr("fill", "none");*/
-
     return (canvas);
 }
 
@@ -24,7 +16,6 @@ function baseText(canvas, widthEcran, heightEcran) {
         .attr("text-anchor", "middle")
         .attr("dx", widthEcran*0.5)
         .attr("dy", heightEcran*0.1);
-
     canvas.append("text")
         .attr("font-size", "200%")
         .text("Nombre de fraude par an au Canada")
@@ -42,7 +33,6 @@ function baseBouton(canvas, widthEcran, heightEcran, nbClick) {
         .attr("height", 50)
         .attr("stroke", "black")
         .attr("fill", "white");
-
     canvas.append("text")
         .attr("class", "Button_" + nbClick)
         .attr("font-size", "120%")
@@ -91,7 +81,6 @@ function baseReload(canvas, widthEcran, heightEcran) {
         .attr("height", 50)
         .attr("stroke", "black")
         .attr("fill", "white");
-
     canvas.append("text")
         .attr("class", "Reload")
         .attr("font-size", "120%")

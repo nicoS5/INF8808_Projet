@@ -7,7 +7,6 @@ function wafflePre(canvas, widthEcran, heightEcran, tailleWaffle) {
         .text("= 1 000 cas de fraude")
         .attr("dx", widthEcran*0.5)
         .attr("dy", heightEcran*0.5);
-
     canvas.append("rect")
         .attr("class", "wafflePre")
         .attr("x", widthEcran*0.5 - tailleWaffle-10)
@@ -19,7 +18,6 @@ function wafflePre(canvas, widthEcran, heightEcran, tailleWaffle) {
 
 function waffleMaker(canvas, widthEcran, heightEcran, AllStats, waffleTaille) {
     var offsetX = widthEcran*0.05;
-
     AllStats.provinces.forEach(function (d, i) {
         var province = cleanProvince(d);
 
@@ -31,7 +29,6 @@ function waffleMaker(canvas, widthEcran, heightEcran, AllStats, waffleTaille) {
             .attr("width", 225)
             .attr("fill", "white")
             .attr("stroke", "black");
-
         canvas.append("text")
             .attr("class", "Button_" + province)
             .text(d.province)
@@ -72,7 +69,6 @@ function waffleMaker2(canvas, widthEcran, heightEcran, province, waffleTaille) {
             .attr("width", 370)
             .attr("fill", "white")
             .attr("stroke", "black");
-
         canvas.append("text")
             .attr("class", "Button_" + ville)
             .text(d.ville)

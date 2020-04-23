@@ -1,4 +1,4 @@
-(function (d3, localization) {
+(function (d3) {
     "use strict";
 
     var widthEcran = document.documentElement.clientWidth * 0.95;
@@ -18,17 +18,6 @@
         console.log(AllStats);
 
         graphLine(canvas, AllStats, widthEcran, heightEcran);
-
-        /*var toggleButtons = d3.selectAll(".toggle-buttons > button");
-        toggleButtons.on("click", function(d, i) {
-            var currentState = d3.select(this).text();
-            //currentData = results[i];
-            toggleButtons.classed("active", function() {
-                return currentState === d3.select(this).text();
-            });
-            //domainRadius(r, currentData);
-            //transition(bubbleChartGroup, currentData, x, y, r);
-        });*/
 
         canvas.selectAll(".Button_0")
             .on("click", function () {
@@ -84,4 +73,4 @@
                     });
             });
     });
-})(d3, localization);
+})(d3);
