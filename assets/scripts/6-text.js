@@ -25,3 +25,13 @@ function Text1(canvas, widthEcran, heightEcran) {
         .attr("dx", widthEcran*0.5)
         .attr("dy", heightEcran*0.3 + 60);
 }
+
+function Text2(canvas, widthEcran, heightEcran) {
+    canvas.append("text")
+        .attr("class", "Text2")
+        .attr("font-size", "140%")
+        .text("Cliquez sur un carre a gauche.")
+        .attr("text-anchor", "middle")
+        .attr("dx", widthEcran*0.8)
+        .attr("dy", heightEcran*0.2);
+}

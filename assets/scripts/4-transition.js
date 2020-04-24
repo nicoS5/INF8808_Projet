@@ -65,3 +65,8 @@ function removeWaffles2(canvas, villes, CVille, heightEcran) {
     });
 }
 
+function removeText2(canvas) {
+    canvas.selectAll(".Text2")
+        .remove();
+}
+

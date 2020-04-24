@@ -33,7 +33,7 @@
                     .on("click", function () {
                         nbClick++;
                         moveWafflePre(canvas,widthEcran,heightEcran);
-
+                        Text2(canvas, widthEcran, heightEcran);
                         waffleMaker(canvas,widthEcran, heightEcran, AllStats, waffleTaille);
 
                         AllStats.provinces.forEach(function (d) {
@@ -51,6 +51,7 @@
                                             canvas.selectAll(".Button_" + ville)
                                                 .on("click", function () {
                                                     removeWaffles2(canvas, d.villes, ville, heightEcran);
+                                                    removeText2(canvas);
 
                                                     graphLine(canvas, dd, widthEcran, heightEcran);
                                                     baseReload(canvas, widthEcran, heightEcran);
@@ -62,6 +63,7 @@
                                         })
                                     }
                                     else {
+                                        removeText2(canvas);
                                         graphLine(canvas, d, widthEcran, heightEcran);
                                         baseReload(canvas, widthEcran, heightEcran);
                                         canvas.selectAll(".Reload")
