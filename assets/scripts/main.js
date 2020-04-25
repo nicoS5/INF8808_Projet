@@ -15,7 +15,6 @@
         dataParse(data);
         var names = dataNames(data);
         var AllStats = dataOrg(data, names);
-        console.log(AllStats);
 
         graphLine(canvas, AllStats, widthEcran, heightEcran);
 
@@ -40,7 +39,6 @@
                             var province = cleanProvince(d);
                             canvas.selectAll(".Button_" + province)
                                 .on("click", function () {
-                                    console.log(d);
                                     removeWaffles(canvas, AllStats, d.province, heightEcran);
 
                                     if (d.villes.length > 0) {
@@ -59,8 +57,20 @@
                                                         .on("click", function () {
                                                             location.reload();
                                                         })
+                                                        .on("mouseover", function () {
+                                                        baseHover(canvas, "R");
+                                                        })
+                                                        .on("mouseout", function () {
+                                                            baseHoverOut(canvas, "R");
+                                                        });
                                                 })
-                                        })
+                                                .on("mouseover", function () {
+                                                    baseHover(canvas, ville);
+                                                })
+                                                .on("mouseout", function () {
+                                                    baseHoverOut(canvas, ville);
+                                                });
+                                        });
                                     }
                                     else {
                                         removeText2(canvas);
@@ -70,10 +80,34 @@
                                             .on("click", function () {
                                                 location.reload();
                                             })
+                                            .on("mouseover", function () {
+                                            baseHover(canvas, "R");
+                                            })
+                                            .on("mouseout", function () {
+                                                baseHoverOut(canvas, "R");
+                                            });
                                     }
+                                })
+                                .on("mouseover", function () {
+                                    baseHover(canvas, province);
+                                })
+                                .on("mouseout", function () {
+                                    baseHoverOut(canvas, province);
                                 });
                         });
+                    })
+                    .on("mouseover", function () {
+                        baseHover(canvas, nbClick);
+                    })
+                    .on("mouseout", function () {
+                        baseHoverOut(canvas, nbClick);
                     });
+            })
+            .on("mouseover", function() {
+                baseHover(canvas, nbClick);
+            })
+            .on("mouseout", function() {
+                baseHoverOut(canvas, nbClick);
             });
     });
 })(d3);

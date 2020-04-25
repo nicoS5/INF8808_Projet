@@ -18,7 +18,7 @@ function baseText(canvas, widthEcran, heightEcran) {
         .attr("dy", heightEcran*0.1);
     canvas.append("text")
         .attr("font-size", "200%")
-        .text("Nombre de fraude par an au Canada")
+        .text("Nombre de fraude par an au Canada de 1998 a 2018")
         .attr("text-anchor", "middle")
         .attr("dx", widthEcran*0.5)
         .attr("dy", heightEcran*0.2);
@@ -27,6 +27,7 @@ function baseText(canvas, widthEcran, heightEcran) {
 function baseBouton(canvas, widthEcran, heightEcran, nbClick) {
     canvas.append("rect")
         .attr("class", "Button_" + nbClick)
+        .attr("id", "rect_" + nbClick)
         .attr("x", widthEcran*0.8)
         .attr("y", heightEcran*0.9)
         .attr("width", 150)
@@ -75,6 +76,7 @@ function  cleanVille(d) {
 function baseReload(canvas, widthEcran, heightEcran) {
     canvas.append("rect")
         .attr("class", "Reload")
+        .attr("id", "rect_R")
         .attr("x", widthEcran*0.8)
         .attr("y", heightEcran*0.9)
         .attr("width", 150)
@@ -88,4 +90,15 @@ function baseReload(canvas, widthEcran, heightEcran) {
         .attr("text-anchor", "middle")
         .attr("dx", widthEcran*0.8 + 75)
         .attr("dy", heightEcran*0.9 + 30);
+}
+
+function baseHover(canvas, nbClicks) {
+    console.log("zezez");
+    canvas.selectAll("#rect_" + nbClicks)
+        .attr("fill", "grey");
+}
+
+function baseHoverOut(canvas, nbClicks) {
+    canvas.selectAll("#rect_" + nbClicks)
+        .attr("fill", "white");
 }

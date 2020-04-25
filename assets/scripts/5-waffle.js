@@ -23,6 +23,7 @@ function waffleMaker(canvas, widthEcran, heightEcran, AllStats, waffleTaille) {
 
         canvas.append("rect")
             .attr("class", "Button_" + province)
+            .attr("id", "rect_" + province)
             .attr("x", offsetX-10)
             .attr("y", heightEcran*0.07*(i+1) - 6)
             .attr("height", 40)
@@ -63,6 +64,7 @@ function waffleMaker2(canvas, widthEcran, heightEcran, province, waffleTaille) {
 
         canvas.append("rect")
             .attr("class", "Button_" + ville)
+            .attr("id", "rect_" + ville)
             .attr("x", heightEcran*0.05 -10)
             .attr("y", heightEcran*0.07*(i+1) + heightEcran*0.2 - 25)
             .attr("height", 40)
