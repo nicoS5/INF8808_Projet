@@ -93,7 +93,6 @@ function baseReload(canvas, widthEcran, heightEcran) {
 }
 
 function baseHover(canvas, nbClicks) {
-    console.log("zezez");
     canvas.selectAll("#rect_" + nbClicks)
         .attr("fill", "grey");
 }
